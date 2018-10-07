@@ -40,6 +40,7 @@ defmodule Cards do
   Divides a desk into a hand the remainder of the deck.
   The `hand_size` argument indicates how many cards should
   be in the deck
+  Modif
 
   ## Examples
 
