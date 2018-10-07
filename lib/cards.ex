@@ -44,7 +44,7 @@ defmodule Cards do
   ## Examples
 
       iex> deck = Cards.create_deck
-      iex> {hand, deck} = Cards.deal(deck, 1)
+      iex> {hand, _deck} = Cards.deal(deck, 1)
       iex> hand
       ["Ace of Spades"]
 
@@ -66,6 +66,8 @@ defmodule Cards do
   end
 
   def create_hand(hand_size) do
-    Cards.create_deck() |> Cards.shuffle() |> Cards.deal(hand_size)
+    Cards.create_deck()
+    |> Cards.shuffle()
+    |> Cards.deal(hand_size)
   end
 end
